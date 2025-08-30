@@ -16,12 +16,12 @@
     body {
       background: url('images/landing-page-image.png') no-repeat center center fixed;
       background-size: cover;
+      position: relative;
       color: white;
+      text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      position: relative;
-      text-align: center;
     }
 
     /* Overlay for readability */
@@ -29,38 +29,44 @@
       position: absolute;
       top: 0;
       left: 0;
-      height: 100%;
       width: 100%;
-      background-color: rgba(0, 0, 50, 0.5); /* dark blue overlay */
+      height: 100%;
+      background-color: rgba(0, 0, 50, 0.5);
       z-index: 0;
     }
 
-    .content {
+    /* Container for all content */
+    .container {
       position: relative;
       z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
+    }
+
+    .content {
       padding: 50px 20px 20px 20px;
     }
 
     h1 {
       font-size: 48px;
       margin: 0 0 20px;
-      color: #cce0ff; /* light blue */
+      color: #cce0ff;
     }
 
     p {
       font-size: 24px;
       margin: 0 0 40px;
-      color: #e6f0ff; /* lighter blue */
+      color: #e6f0ff;
     }
 
     .buttons {
-      position: relative;
-      z-index: 1;
       margin-bottom: 50px;
     }
 
     .btn {
-      background-color: #3399ff; /* blue */
+      background-color: #3399ff;
       border: none;
       padding: 15px 30px;
       margin: 10px;
@@ -73,17 +79,7 @@
     }
 
     .btn:hover {
-      background-color: #0073e6; /* darker blue on hover */
-    }
-
-    /* Ensure content pushes buttons to bottom */
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100vh;
-      position: relative;
-      z-index: 1;
+      background-color: #0073e6;
     }
 
     @media (max-width: 600px) {
