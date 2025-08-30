@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Page</title>
   <style>
+    /* Load your font */
+    @font-face {
+      font-family: 'Harmond';
+      src: url('fonts/Harmond-ExtraBoldExpanded.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
@@ -12,7 +20,6 @@
       font-family: Arial, sans-serif;
     }
 
-    /* Full-screen background image */
     body {
       background: url('images/landing-page-image.png') no-repeat center center fixed;
       background-size: cover;
@@ -24,7 +31,7 @@
       justify-content: space-between;
     }
 
-    /* Overlay for readability */
+    /* Overlay */
     .overlay {
       position: absolute;
       top: 0;
@@ -50,6 +57,7 @@
     }
 
     h1 {
+      font-family: 'Harmond', sans-serif;
       font-size: 48px;
       margin: 0 0 20px;
       color: #cce0ff;
