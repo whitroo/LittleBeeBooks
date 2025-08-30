@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Page</title>
   <style>
-    /* Ensure the page takes up full height */
     html, body {
       margin: 0;
       padding: 0;
@@ -15,46 +14,43 @@
 
     /* Full-screen background image */
     body {
-      background: url('landing page image.png') no-repeat center center fixed;
+      background: url('images/landing-page-image.png') no-repeat center center fixed;
       background-size: cover;
+      color: white;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      color: white;
+      position: relative;
       text-align: center;
     }
 
-    /* Overlay for better text readability */
+    /* Overlay for readability */
     .overlay {
       position: absolute;
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: rgba(0,0,0,0.5); /* semi-transparent black */
+      background-color: rgba(0, 0, 50, 0.5); /* dark blue overlay */
       z-index: 0;
     }
 
-    /* Content container */
     .content {
       position: relative;
       z-index: 1;
-      padding: 50px 20px 100px 20px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
+      padding: 50px 20px 20px 20px;
     }
 
     h1 {
       font-size: 48px;
       margin: 0 0 20px;
+      color: #cce0ff; /* light blue */
     }
 
     p {
       font-size: 24px;
       margin: 0 0 40px;
+      color: #e6f0ff; /* lighter blue */
     }
 
     .buttons {
@@ -64,7 +60,7 @@
     }
 
     .btn {
-      background-color: #ff6b6b;
+      background-color: #3399ff; /* blue */
       border: none;
       padding: 15px 30px;
       margin: 10px;
@@ -77,7 +73,17 @@
     }
 
     .btn:hover {
-      background-color: #ff4757;
+      background-color: #0073e6; /* darker blue on hover */
+    }
+
+    /* Ensure content pushes buttons to bottom */
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
+      position: relative;
+      z-index: 1;
     }
 
     @media (max-width: 600px) {
@@ -96,12 +102,14 @@
 </head>
 <body>
   <div class="overlay"></div>
-  <div class="content">
-    <h1>The Only Gift for the Sophiticated Treavel Parent in your life</h1>
-    <p>Pre-Order Now for Christmas 2025</p>
+  <div class="container">
+    <div class="content">
+      <h1>The only gift for the Sophisticated Travel Parent in your life</h1>
+      <p>Pre-Order for Christmas 2025</p>
+    </div>
     <div class="buttons">
-      <a href="#cta1" class="btn">Pre-Order Greece Now</a>
-      <a href="#cta2" class="btn">Pre-Order France Now</a>
+      <a href="#cta1" class="btn">Pre-Order France</a>
+      <a href="#cta2" class="btn">Pre-Order Greece</a>
     </div>
   </div>
 </body>
