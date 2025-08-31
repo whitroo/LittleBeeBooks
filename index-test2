@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page</title>
+<style>
+@font-face {
+  font-family: 'Harmond';
+  src: url('fonts/Harmond-SemiBoldCondensed.otf') format('opentype');
+}
+@font-face {
+  font-family: 'NeueMetana';
+  src: url('fonts/NeueMetana-Regular.otf') format('opentype');
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff; /* fallback */
+}
+
+.main {
+  display: flex;
+  flex: 1;
+}
+
+/* Left text panel */
+.left {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FD963A;
+  color: white;
+}
+
+.left h1 {
+  font-family: 'Harmond', sans-serif;
+  font-size: 100px;
+  line-height: 1.1;
+  margin: 0 0 20px;
+  color: #c6f213;
+}
+
+.left p {
+  font-family: 'Harmond', sans-serif;
+  font-size: 32px;
+  margin: 0;
+  color: #c6f213;
+}
+
+/* Right image panel */
+.right {
+  flex: 1.5; /* wider than left */
+  position: relative;
+  background: url('images/Coastal Dining with Goats and Sailboats (1).png') no-repeat center center;
+  background-size: cover;
+}
+
+.right .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+ /* background-color: rgba(255,255,255,0.4); /* white overlay */
+}
+
+/* Bottom full-width buttons */
+.bottom-buttons {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background-color: #FD963A;
+  gap: 40px;
+}
+
+.bottom-buttons .btn {
+  font-family: 'NeueMetana';
+  font-size: 32px;
+  padding: 30px 60px;
+  border-radius: 10px;
+  border: none;
+  background-color: #BAA331;
+  color: #c6f213;
+  cursor: pointer;
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+  transition: background-color 0.3s;
+   text-decoration: none !important;
+}
+
+.bottom-buttons .btn:hover {
+  background-color: #A09D33;
+  color: #c6f213;
+}
+
+@media (max-width: 900px) {
+  .main {
+    flex-direction: column;
+  }
+  .right {
+    height: 300px;
+  }
+  .bottom-buttons {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="main">
+  <div class="left">
+    <h1>THE ONLY GIFT<br>for the Sophisticated Travel Parent</h1>
+    <p>Shipping before Christmas 2025</p>
+  </div>
+  <div class="right">
+    <div class="overlay"></div>
+  </div>
+</div>
+
+<div class="bottom-buttons">
+  <a href="#cta1" class="btn">Be notified for France</a>
+  <a href="#cta2" class="btn">Be notified for Greece</a>
+</div>
+
+</body>
+</html>
