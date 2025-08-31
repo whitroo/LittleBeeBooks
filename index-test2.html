@@ -25,7 +25,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #EAE3C9; /* fallback */
+  background-color: #EAE3C9;
 }
 
 .main {
@@ -50,7 +50,6 @@ body {
   line-height: 1.1;
   margin: 0 0 20px;
   color: #000042;
-
 }
 
 .left p {
@@ -62,7 +61,7 @@ body {
 
 /* Right image panel */
 .right {
-  flex: 1.5; /* wider than left */
+  flex: 1.5;
   position: relative;
   background: url('images/greece book.png') no-repeat center center;
   background-size: cover;
@@ -72,7 +71,6 @@ body {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
- /* background-color: rgba(255,255,255,0.4); /* white overlay */
 }
 
 /* Bottom full-width buttons */
@@ -97,7 +95,7 @@ body {
   max-width: 400px;
   text-align: center;
   transition: background-color 0.3s;
-   text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 .bottom-buttons .btn:hover {
@@ -105,6 +103,46 @@ body {
   color: #c6f213;
 }
 
+/* Section styling */
+.section {
+  display: flex;
+  align-items: center;
+  padding: 80px 50px;
+  gap: 50px;
+  background-color: #F5F3E7;
+}
+
+.section-image {
+  flex: 1.5;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.section-text {
+  flex: 1;
+  color: #000042;
+}
+
+.section-text h2 {
+  font-family: 'Harmond', sans-serif;
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.section-text p {
+  font-family: 'Harmond', sans-serif;
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+/* Reverse flex direction for image-right section */
+.section-image-right {
+  flex-direction: row-reverse;
+}
+
+/* Responsive */
 @media (max-width: 900px) {
   .main {
     flex-direction: column;
@@ -115,11 +153,20 @@ body {
   .bottom-buttons {
     flex-direction: column;
   }
+  .section {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+  .section-image {
+    width: 100%;
+    height: 300px;
+  }
 }
 </style>
 </head>
 <body>
 
+<!-- Hero Section -->
 <div class="main">
   <div class="left">
     <h1>The ONLY gift<br>for the SOPHISTICATED Travel Parent</h1>
@@ -130,9 +177,28 @@ body {
   </div>
 </div>
 
+<!-- Bottom Buttons -->
 <div class="bottom-buttons">
   <a href="#cta1" class="btn">Be notified for France</a>
   <a href="#cta2" class="btn">Be notified for Greece</a>
+</div>
+
+<!-- Section 1: Image Left, Text Right -->
+<div class="section section-image-left">
+  <div class="section-image" style="background-image: url('images/section1.png');"></div>
+  <div class="section-text">
+    <h2>Discover New Destinations</h2>
+    <p>Experience unforgettable adventures crafted for your family. Our curated travel guides make every trip seamless and enriching.</p>
+  </div>
+</div>
+
+<!-- Section 2: Text Left, Image Right -->
+<div class="section section-image-right">
+  <div class="section-text">
+    <h2>Travel with Ease</h2>
+    <p>Everything you need in one place: tips, packing lists, and insider advice to make your journey smooth and stress-free.</p>
+  </div>
+  <div class="section-image" style="background-image: url('images/section2.png');"></div>
 </div>
 
 </body>
