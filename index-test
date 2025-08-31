@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <style>
+    @font-face {
+      font-family: 'Harmond';
+      src: url('fonts/Harmond-SemiBoldCondensed.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
 
+    @font-face {
+      font-family: 'NeueMetana';
+      src: url('fonts/NeueMetana-Regular.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Left side - solid blue */
+    .left {
+      flex: 34%;
+      background-color: #3399ff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+      color: white;
+    }
+
+    /* Right side - background image */
+    .right {
+      flex: 66%;
+      background: url('images/Mediterranean Feast in Minimalist Style.png') no-repeat center center;
+      background-size: cover;
+    }
+
+    h1 {
+      font-family: 'Harmond', sans-serif;
+      margin: 0 0 20px;
+      text-align: left;
+    }
+    h1 .big {
+      font-size: 200px;
+      line-height: 1;
+    }
+    h1 .small {
+      font-size: 100px;
+      line-height: 1;
+    }
+
+    p {
+      font-family: 'Harmond', sans-serif;
+      font-size: 32px;
+      margin: 20px 0;
+    }
+
+    .buttons {
+      font-family: 'NeueMetana';
+      margin-top: 40px;
+    }
+
+    .btn {
+      font-family: "NeueMetana";
+      background-color: white;
+      border: none;
+      padding: 15px 30px;
+      margin: 10px;
+      color: #3399ff;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e6f0ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="left">
+    <h1>
+      <span class="big">THE ONLY GIFT</span><br>
+      <span class="small">for the Sophisticated Travel Parent</span>
+    </h1>
+    <p>Pre-Order for Christmas 2025</p>
+    <div class="buttons">
+      <a href="#cta1" class="btn">Be the First France</a>
+      <a href="#cta2" class="btn">Be the First Greece</a>
+    </div>
+  </div>
+  <div class="right"></div>
+</body>
+</html>
