@@ -45,7 +45,7 @@ body {
 }
 
 .left h1 {
-  font-family: 'Harmond', sans-serif;
+  font-family: 'NeueMetana', sans-serif;
   font-size: 100px;
   line-height: 1.1;
   margin: 0 0 20px;
@@ -53,7 +53,7 @@ body {
 }
 
 .left p {
-  font-family: 'Harmond', sans-serif;
+  font-family: 'NeueMetana', sans-serif;
   font-size: 48px;
   margin: 0;
   color: #000042;
@@ -138,9 +138,16 @@ body {
 }
 
 /* Reverse flex direction for image-right section */
-.section-image-right {
-  flex-direction: row-reverse;
+.section-text-left-image-right {
+  flex-direction: row; /* ensures text is left, image is right */
 }
+
+@media (max-width: 900px) {
+  .section-text-left-image-right {
+    flex-direction: column; /* stack on mobile */
+  }
+}
+
 
 /* Responsive */
 @media (max-width: 900px) {
@@ -187,19 +194,21 @@ body {
 <div class="section section-image-left">
   <div class="section-image" style="background-image: url('images/book stack.png');"></div>
   <div class="section-text">
-    <h2>Inspire the Next Generation of Explorers</h2>
-    <p>Design forward travel books for kids that make the perfect gift.</p>
+    <h2>Design forward travel books for kids that make the perfect gift.</h2>
+    <p>Inspire the Next Generation of Explorers</p>
   </div>
 </div>
 
 <!-- Section 2: Text Left, Image Right -->
-<div class="section section-image-right">
+<div class="section section-text-left-image-right">
   <div class="section-text">
     <h2>Share Beautiful Destinations with Kids</h2>
     <p>With our beautiful, displayable coffee table books</p>
   </div>
   <div class="section-image" style="background-image: url('images/open book.png');"></div>
 </div>
+
+
 
 </body>
 </html>
