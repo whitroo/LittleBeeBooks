@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page</title>
+<style>
+@font-face {
+  font-family: 'Harmond';
+  src: url('fonts/Harmond-SemiBoldCondensed.otf') format('opentype');
+}
+@font-face {
+  font-family: 'NeueMetana';
+  src: url('fonts/NeueMetana-Regular.otf') format('opentype');
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #EAE3C9;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+}
+
+/* Left text panel */
+.left {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #EAE3C9;
+  color: white;
+}
+
+.left h1 {
+  font-family: 'NeueMetana', sans-serif;
+  font-size: 100px;
+  line-height: 1.1;
+  margin: 0 0 20px;
+  color: #000042;
+}
+
+.left p {
+  font-family: 'NeueMetana', sans-serif;
+  font-size: 48px;
+  margin: 0;
+  color: #000042;
+}
+
+/* Right image panel */
+.right {
+  flex: 1.5;
+  position: relative;
+  background: url('images/greece book.png') no-repeat center center;
+  background-size: cover;
+}
+
+.right .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+
+/* Bottom full-width buttons */
+.bottom-buttons {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background-color: #EAE3C9;
+  gap: 40px;
+}
+
+.bottom-buttons .btn {
+  font-family: 'NeueMetana';
+  font-size: 32px;
+  padding: 30px 60px;
+  border-radius: 10px;
+  border: none;
+  background-color: #000042;
+  color: #EAE3C9;
+  cursor: pointer;
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+  transition: background-color 0.3s;
+  text-decoration: none !important;
+}
+
+.bottom-buttons .btn:hover {
+  background-color: #A09D33;
+  color: #c6f213;
+}
+
+/* Section styling */
+.section {
+  display: flex;
+  align-items: center;
+  padding: 80px 50px;
+  gap: 50px;
+  background-color: #F5F3E7;
+}
+
+.section-image {
+  flex: 1.5;
+  height: 700px;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.section-text {
+  flex: 1;
+  color: #000042;
+}
+
+.section-text h2 {
+  font-family: 'NeueMetana', sans-serif;
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.section-text p {
+  font-family: 'NeueMetana', sans-serif;
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+/* Reverse flex direction for image-right section */
+.section-text-left-image-right {
+  flex-direction: row; /* ensures text is left, image is right */
+}
+
+@media (max-width: 900px) {
+  .section-text-left-image-right {
+    flex-direction: column; /* stack on mobile */
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main {
+    flex-direction: column;
+  }
+  .right {
+    height: 300px;
+  }
+  .bottom-buttons {
+    flex-direction: column;
+  }
+  .section {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+  .section-image {
+    width: 100%;
+    height: 300px;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<!-- Hero Section -->
+<div class="main">
+  <div class="left">
+    <h1>The ONLY gift<br>for the SOPHISTICATED Travel Parent</h1>
+    <p>Ships in time for Christmas 2025</p>
+    
+    <!-- Limited Printing Text -->
+    <div style="margin: 20px 0; font-family: 'NeueMetana', sans-serif; font-size: 32px; font-weight: bold; color: #000042; text-align: center;">
+      Limited Printing
+    </div>
+    
+    <!-- CTA Buttons Above the Fold -->
+    <div class="hero-buttons" style="margin-top:20px; display:flex; gap:20px; justify-content: center;">
+      <a href="#cta1" class="btn">Be notified for France</a>
+      <a href="#cta2" class="btn">Be notified for Greece</a>
+    </div>
+  </div>
+  <div class="right">
+    <div class="overlay"></div>
+  </div>
+</div>
+
+<!-- Section 1: Image Left, Text Right -->
+<div class="section section-image-left">
+  <div class="section-image" style="background-image: url('images/book stack.png');"></div>
+  <div class="section-text">
+    <h2>Design forward travel books meant for kids, loved by parents.</h2>
+    <p>Handcrafted travel guides that are as beautiful to display as they are fun to read. Perfect for young adventurers and design-conscious parents alike.</p>
+    <!-- Section 1 CTA -->
+    <a href="#cta1" class="btn" style="margin-top:20px;">Sign up for my Copy</a>
+  </div>
+</div>
+
+<!-- Section 2: Text Left, Image Right -->
+<div class="section section-text-left-image-right">
+  <div class="section-text">
+    <h2>Share the World, One Page at a Time</h2>
+    <p>From Paris to Santorini, spark curiosity with curated destinations that encourage kids to see, learn, and dream. These aren’t just books—they’re invitations to adventure.</p>
+    <!-- Section 2 CTA -->
+    <a href="#cta2" class="btn" style="margin-top:20px;">Be notified for Greece</a>
+  </div>
+  <div class="section-image" style="background-image: url('images/open book.png');"></div>
+</div>
+
+
+
+</body>
+</html>
